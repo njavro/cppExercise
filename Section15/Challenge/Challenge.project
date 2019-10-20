@@ -98,6 +98,8 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="Checking_Account.cpp"/>
+    <File Name="Checking_Account.h"/>
     <File Name="main.cpp"/>
     <File Name="Account.h"/>
     <File Name="Account.cpp"/>
