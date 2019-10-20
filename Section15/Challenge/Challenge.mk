@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/private/var/folders/wk/wr2b9zyd623gcf57z1g07ch00000gn/T/AppTranslocation/D22FDDBD-A7A5-42D3-A0E4-B5EC32F3EF73/d/codelite.app/Contents/SharedSupport/
-Objects0=$(IntermediateDirectory)/Checking_Account.cpp$(ObjectSuffix) $(IntermediateDirectory)/Account.cpp$(ObjectSuffix) $(IntermediateDirectory)/Account_Util.cpp$(ObjectSuffix) $(IntermediateDirectory)/Savings_Account.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/Trust_Account.cpp$(ObjectSuffix) $(IntermediateDirectory)/Checking_Account.cpp$(ObjectSuffix) $(IntermediateDirectory)/Account.cpp$(ObjectSuffix) $(IntermediateDirectory)/Account_Util.cpp$(ObjectSuffix) $(IntermediateDirectory)/Savings_Account.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
 
 
 
@@ -91,6 +91,11 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/Trust_Account.cpp$(ObjectSuffix): Trust_Account.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/antonnjavro/Desktop/cppExercises/Section15/Challenge/Trust_Account.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Trust_Account.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Trust_Account.cpp$(PreprocessSuffix): Trust_Account.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Trust_Account.cpp$(PreprocessSuffix) Trust_Account.cpp
+
 $(IntermediateDirectory)/Checking_Account.cpp$(ObjectSuffix): Checking_Account.cpp 
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/antonnjavro/Desktop/cppExercises/Section15/Challenge/Checking_Account.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Checking_Account.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Checking_Account.cpp$(PreprocessSuffix): Checking_Account.cpp
